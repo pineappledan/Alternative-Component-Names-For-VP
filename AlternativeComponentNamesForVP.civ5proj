@@ -3,17 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
     <ProjectGuid>{9d441f94-2b71-438f-a4c8-55b0ac146186}</ProjectGuid>
-    <Name>AlternativeComponentNames</Name>
+    <Name>Alternative Component Names</Name>
     <Guid>7f744e52-8950-4961-93f4-6b6d121b7894</Guid>
     <ModVersion>1</ModVersion>
     <Stability>Alpha</Stability>
-    <Teaser>Renames components using either endonyms (english translations) or xenonyms (native words).
-
-Compatible with VP, MUCfVP and C</Teaser>
-    <Description>Renames components using either endonyms (english translations) or xenonyms (native words).
+    <Teaser>Renames components using either endonyms (english translations) or xenonyms (native words).</Teaser>
+    <Description>Renames components using either endonyms (english translations) or xenonyms (native words). 
 
 Compatible with VP, MUCfVP and Civilization mods (Khmer, Israel).</Description>
-    <Authors>Adam</Authors>
+    <Authors>adan_eslavo</Authors>
     <SpecialThanks>pineappledan</SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
     <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
@@ -24,6 +22,41 @@ Compatible with VP, MUCfVP and Civilization mods (Khmer, Israel).</Description>
     <AssemblyName>AlternativeComponentNamesForVP</AssemblyName>
     <RootNamespace>AlternativeComponentNamesForVP</RootNamespace>
     <ModReferences />
+    <ModDependencies>
+      <Association>
+        <Type>Mod</Type>
+        <Name>(3) City-State Diplomacy Mod for CBP</Name>
+        <Id>eead0050-1e3f-4178-a91f-26cf1881ac39</Id>
+        <MinVersion>27</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
+      <Association>
+        <Type>Mod</Type>
+        <Name>(4) C4DF - CBP</Name>
+        <Id>c7bf7064-d1b1-4708-9e93-7a1560868582</Id>
+        <MinVersion>11</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
+      <Association>
+        <Type>Mod</Type>
+        <Name>(5) More Luxuries - CBO Edition</Name>
+        <Id>be2d13ee-d18d-410e-8f04-7cd19cd99a98</Id>
+        <MinVersion>155</MinVersion>
+        <MaxVersion>999</MaxVersion>
+      </Association>
+    </ModDependencies>
+    <ModActions>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Texts/AlternativeNames.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Settings/ACNSettings.sql</FileName>
+      </Action>
+    </ModActions>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
     <OutputPath>.</OutputPath>
@@ -37,6 +70,22 @@ Compatible with VP, MUCfVP and Civilization mods (Khmer, Israel).</Description>
     <DeployMod>true</DeployMod>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Changelog.txt">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Settings\ACNSettings.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Texts\AlternativeNames.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Settings" />
+    <Folder Include="Texts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Firaxis\ModBuddy\Civ5Mod.targets" />
 </Project>
