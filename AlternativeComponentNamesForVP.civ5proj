@@ -8,7 +8,7 @@
     <ModVersion>1</ModVersion>
     <Stability>Alpha</Stability>
     <Teaser>Renames components using either endonyms (english translations) or xenonyms (native words).</Teaser>
-    <Description>Renames components using either endonyms (english translations) or xenonyms (native words). 
+    <Description>Renames components and civilizations using either endonyms (english translations) or xenonyms (native words). 
 
 Compatible with VP, MUCfVP and Civilization mods (Khmer, Israel).</Description>
     <Authors>adan_eslavo</Authors>
@@ -49,12 +49,12 @@ Compatible with VP, MUCfVP and Civilization mods (Khmer, Israel).</Description>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Texts/AlternativeNames.sql</FileName>
+        <FileName>Settings/ACNSettings.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Settings/ACNSettings.sql</FileName>
+        <FileName>Texts/AlternativeNames.sql</FileName>
       </Action>
     </ModActions>
   </PropertyGroup>
