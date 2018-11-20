@@ -5,9 +5,9 @@ v1:
 	- available settings (by changing special value in Texts/AlternativeNames.sql file):
 		- mode:
 			- mixed,
-			- endonyms (all names are changed to use english names),
-			- xenonyms (all names are changed to use native language of the nation),
-			- xenonyms-full (all names are changed to use native language of the nation including loanwords).
-		- civilization names:
+			- xenonyms (all names are changed to use english names),
+			- endonyms (all names are changed to use native language of the nation),
+			- endonyms-full (all names are changed to use native language of the nation including loanwords).
+		- civilization names (short and long):
 			- original,
-			- xenonyms (all names are changed to use native language of the nation).
+			- endonyms (all names are changed to use native language of the nation).

@@ -45,7 +45,7 @@ WHERE Type = 'ACN-CIV-ISR' AND EXISTS (SELECT * FROM Units WHERE Type='UNIT_ISRA
 --==============================================================================================================================================================================================================================================================================================--
 --==============================================================================================================================================================================================================================================================================================--
 -- Alternative Names
-	-- Endonyms
+	-- Xenonyms
 		-- VP
 		UPDATE Language_en_US SET Text = 'Fighting Elephant' WHERE Tag = 'TXT_KEY_UNIT_INDIAN_WARELEPHANT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND Value=1) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
 		UPDATE Language_en_US SET Text = 'Yurt' WHERE Tag = 'TXT_KEY_BUILDING_YURT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND Value=1) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
@@ -58,7 +58,7 @@ WHERE Type = 'ACN-CIV-ISR' AND EXISTS (SELECT * FROM Units WHERE Type='UNIT_ISRA
 		UPDATE Language_en_US SET Text = 'Galiot' WHERE Tag = 'TXT_KEY_UNIT_VENICE_FUSTA' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND Value=1) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-MUCfVP' AND Value=1);
 		UPDATE Language_en_US SET Text = 'Mughal Fort' WHERE Tag = 'TXT_KEY_BUILDING_INDIA_QILA' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND Value=1) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-MUCfVP' AND Value=1);
 		UPDATE Language_en_US SET Text = 'Paradise Garden' WHERE Tag = 'TXT_KEY_BUILDING_PERSIA_PAIRIDAEZA' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND Value=1) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-MUCfVP' AND Value=1);
-	-- Xenonyms
+	-- Endonyms
 		-- VP
 		UPDATE Language_en_US SET Text = 'Ghazi' WHERE Tag = 'TXT_KEY_UNIT_ARABIAN_CAMELARCHER' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
 		UPDATE Language_en_US SET Text = 'Kaffeehaus' WHERE Tag = 'TXT_KEY_BUILDING_COFFEE_HOUSE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
@@ -82,11 +82,12 @@ WHERE Type = 'ACN-CIV-ISR' AND EXISTS (SELECT * FROM Units WHERE Type='UNIT_ISRA
 		UPDATE Language_en_US SET Text = 'Stajnia Ksiazeca' WHERE Tag = 'TXT_KEY_BUILDING_DUCAL_STABLE_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
 		UPDATE Language_en_US SET Text = 'Husaria' WHERE Tag = 'TXT_KEY_UNIT_POLISH_WINGED_HUSSAR' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
 		UPDATE Language_en_US SET Text = 'Ika a Whiro' WHERE Tag = 'TXT_KEY_UNIT_POLYNESIAN_MAORI_WARRIOR' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
-		UPDATE Language_en_US SET Text = 'Pungkuto''ettü' WHERE Tag = 'TXT_KEY_UNIT_SHOSHONE_COMANCHE_RIDERS' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Pungkuto''ettu' WHERE Tag = 'TXT_KEY_UNIT_SHOSHONE_COMANCHE_RIDERS' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
 		UPDATE Language_en_US SET Text = 'Katukkatun' WHERE Tag = 'TXT_KEY_IMPROVEMENT_ENCAMPMENT_SHOSHONE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
 		UPDATE Language_en_US SET Text = 'Chang Suek' WHERE Tag = 'TXT_KEY_UNIT_SIAMESE_WARELEPHANT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
 		UPDATE Language_en_US SET Text = 'Farari' WHERE Tag = 'TXT_KEY_UNIT_SONGHAI_MUSLIMCAVALRY' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
 		UPDATE Language_en_US SET Text = 'Magni Mercante' WHERE Tag = 'TXT_KEY_UNIT_VENETIAN_MERCHANT' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Zao Zhi' WHERE Tag = 'TXT_KEY_BUILDING_PAPER_MAKER_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND (Value=2 OR Value=3)) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-MUCfVP' AND Value=1);
 			-- detailed VP
 			UPDATE Language_en_US SET Text = 'Qasbah' WHERE Tag = 'TXT_KEY_IMPROVEMENT_KASBAH' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND Value=3) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
 			UPDATE Language_en_US SET Text = 'Oplitis' WHERE Tag = 'TXT_KEY_UNIT_GREEK_HOPLITE' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNALT' AND Value=3) AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACN-VP-CBP' AND Value=1);
@@ -113,15 +114,60 @@ WHERE Type = 'ACN-CIV-ISR' AND EXISTS (SELECT * FROM Units WHERE Type='UNIT_ISRA
 --==============================================================================================================================================================================================================================================================================================--
 --==============================================================================================================================================================================================================================================================================================--
 -- Civilization Names
-	-- VP
-	UPDATE Language_en_US SET Text = 'Al-Magrib' WHERE Tag = 'TXT_KEY_CIV_MOROCCO_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
-	UPDATE Language_en_US SET Text = 'Ellada' WHERE Tag = 'TXT_KEY_CIV_GREECE_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
-	UPDATE Language_en_US SET Text = 'Athura' WHERE Tag = 'TXT_KEY_CIV_ASSYRIA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
-	UPDATE Language_en_US SET Text = 'Roma' WHERE Tag = 'TXT_KEY_CIV_ROME_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
-	UPDATE Language_en_US SET Text = 'Deutschland' WHERE Tag = 'TXT_KEY_CIV_GERMANY_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
-	UPDATE Language_en_US SET Text = 'Rossiya' WHERE Tag = 'TXT_KEY_CIV_RUSSIA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
-	UPDATE Language_en_US SET Text = 'Shahanshahiye Iran' WHERE Tag = 'TXT_KEY_CIV_PERSIA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
-	UPDATE Language_en_US SET Text = 'Qart-hadasht' WHERE Tag = 'TXT_KEY_CIV_CARTHAGE_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
-	UPDATE Language_en_US SET Text = 'Polska' WHERE Tag = 'TXT_KEY_CIV_POLAND_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+	-- Endoetnonyms
+		-- VP
+		UPDATE Language_en_US SET Text = 'Al-magrib' WHERE Tag = 'TXT_KEY_CIV_MOROCCO_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Al-mamlakah al-maghribiyah' WHERE Tag = 'TXT_KEY_CIV_MOROCCO_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Makedonia' WHERE Tag = 'TXT_KEY_CIV_GREECE_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Makedonia' WHERE Tag = 'TXT_KEY_CIV_GREECE_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Athura' WHERE Tag = 'TXT_KEY_CIV_ASSYRIA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Athura' WHERE Tag = 'TXT_KEY_CIV_ASSYRIA_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Roma' WHERE Tag = 'TXT_KEY_CIV_ROME_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Imperium Romanum' WHERE Tag = 'TXT_KEY_CIV_ROME_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Deutschland' WHERE Tag = 'TXT_KEY_CIV_GERMANY_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Deutsches Kaiserreich' WHERE Tag = 'TXT_KEY_CIV_GERMANY_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Rossiya' WHERE Tag = 'TXT_KEY_CIV_RUSSIA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Rossiyskaya Imperiya' WHERE Tag = 'TXT_KEY_CIV_RUSSIA_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Xshassa' WHERE Tag = 'TXT_KEY_CIV_PERSIA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Haxamanishiya' WHERE Tag = 'TXT_KEY_CIV_PERSIA_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Qart-hadasht' WHERE Tag = 'TXT_KEY_CIV_CARTHAGE_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Qart-hadasht' WHERE Tag = 'TXT_KEY_CIV_CARTHAGE_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Polska' WHERE Tag = 'TXT_KEY_CIV_POLAND_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Krolestwo Polskie' WHERE Tag = 'TXT_KEY_CIV_POLAND_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Mexica' WHERE Tag = 'TXT_KEY_CIV_AZTEC_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Mexica' WHERE Tag = 'TXT_KEY_CIV_AZTEC_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Zhongguo' WHERE Tag = 'TXT_KEY_CIV_CHINA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Zhongguo' WHERE Tag = 'TXT_KEY_CIV_CHINA_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Tawantinsuyu' WHERE Tag = 'TXT_KEY_CIV_INCA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Tawantinsuyu' WHERE Tag = 'TXT_KEY_CIV_INCA_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Venesia' WHERE Tag = 'TXT_KEY_CIV_VENICE_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Republica de Venesia' WHERE Tag = 'TXT_KEY_CIV_VENICE_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Bharat' WHERE Tag = 'TXT_KEY_CIV_INDIA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Bharat Ganarajya' WHERE Tag = 'TXT_KEY_CIV_INDIA_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Monggol Ulus' WHERE Tag = 'TXT_KEY_CIV_MONGOL_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Monggol Ulus' WHERE Tag = 'TXT_KEY_CIV_MONGOL_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Sverige' WHERE Tag = 'TXT_KEY_CIV_SWEDEN_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Konungariket Sverige' WHERE Tag = 'TXT_KEY_CIV_SWEDEN_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Ityoppya' WHERE Tag = 'TXT_KEY_CIV_ETHIOPIA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'ye?Itiyoppya Federalawi Demokirasiyawi Ripebilik' WHERE Tag = 'TXT_KEY_CIV_ETHIOPIA_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+				UPDATE Language_en_US SET Text = 'Danmark' WHERE Tag = 'TXT_KEY_CIV_DENMARK_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Arabiya' WHERE Tag = 'TXT_KEY_CIV_ARABIA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Haudenosaunee' WHERE Tag = 'TXT_KEY_CIV_IROQUOIS_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Espana' WHERE Tag = 'TXT_KEY_CIV_SPAIN_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Reino de Espana' WHERE Tag = 'TXT_KEY_CIV_SPAIN_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Osterreich' WHERE Tag = 'TXT_KEY_CIV_AUSTRIA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Nippon' WHERE Tag = 'TXT_KEY_CIV_JAPAN_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Brasil' WHERE Tag = 'TXT_KEY_CIV_BRAZIL_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Newe' WHERE Tag = 'TXT_KEY_CIV_SHOSHONE_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Misr' WHERE Tag = 'TXT_KEY_CIV_EGYPT_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Sukhotai' WHERE Tag = 'TXT_KEY_CIV_SIAM_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Joseon' WHERE Tag = 'TXT_KEY_CIV_KOREA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'amaZulu' WHERE Tag = 'TXT_KEY_CIV_ZULU_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Osmanli Türkleri' WHERE Tag = 'TXT_KEY_CIV_OTTOMAN_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+			UPDATE Language_en_US SET Text = 'Devlet-i Aliye-i Osmaniye' WHERE Tag = 'TXT_KEY_CIV_OTTOMAN_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Basileia Rhomaion' WHERE Tag = 'TXT_KEY_CIV_BYZANTIUM_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Nederland' WHERE Tag = 'TXT_KEY_CIV_NETHERLANDS_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+		UPDATE Language_en_US SET Text = 'Polenisia' WHERE Tag = 'TXT_KEY_CIV_POLYNESIA_SHORT_DESC' AND EXISTS (SELECT * FROM COMMUNITY WHERE Type='ACNCIV' AND Value=1);
+	
 --==============================================================================================================================================================================================================================================================================================--
 --==============================================================================================================================================================================================================================================================================================--

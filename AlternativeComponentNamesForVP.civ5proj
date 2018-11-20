@@ -8,7 +8,7 @@
     <ModVersion>1</ModVersion>
     <Stability>Alpha</Stability>
     <Teaser>Renames components using either endonyms (english translations) or xenonyms (native words).</Teaser>
-    <Description>Renames components and civilizations using either endonyms (english translations) or xenonyms (native words). 
+    <Description>Renames components and civilizations using either xenonyms (english translations) or endonyms (native words). 
 
 Compatible with VP, MUCfVP and Civilization mods (Khmer, Israel).</Description>
     <Authors>adan_eslavo</Authors>
