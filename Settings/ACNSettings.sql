@@ -19,3 +19,14 @@ Civilization's name renaming!
 INSERT INTO COMMUNITY	
 		(Type,			Value)
 VALUES	('ACNCIV',		1);
+
+/*
+Greece renaming!
+0 = Greece.
+1 = Macedonia.
+2 = Makedonia (set as default).
+*/
+
+INSERT INTO COMMUNITY	
+		(Type,			Value)
+VALUES	('ACNMAC',		1);

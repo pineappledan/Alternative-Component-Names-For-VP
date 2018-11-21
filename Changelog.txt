@@ -11,3 +11,7 @@ v1:
 		- civilization names (short and long):
 			- original,
 			- endonyms (all names are changed to use native language of the nation).
+		- renaming Greece to Macedonia
+			- Greece,
+			- Macedonia,
+			- Makedonia.
