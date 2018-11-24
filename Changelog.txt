@@ -3,13 +3,13 @@ v1:
 - added:
 	- basic features for: VP and MUCfVP,
 	- available settings (by changing special value in Texts/AlternativeNames.sql file):
-		- mode:
+		- main mode:
 			- mixed,
 			- xenonyms (all names are changed to use english names),
 			- xenonyms-full (all names are changed to english names including ...)
 			- endonyms (all names are changed to use native language of the nation),
 			- endonyms-full (all names are changed to use native language of the nation including loanwords).
-		- civilization names (short and long):
+		- native civilization names (short and long):
 			- original,
 			- endonyms (all names are changed to use native language of the nation).
 		- renaming Greece to Macedonia:
@@ -20,4 +20,6 @@ v1:
 			- Polinesia,
 			- Polenisia,
 			- Hawai'i.
-		- leader names?
+		- native leader names,
+		- native and reordered city names,
+		- random city names.
